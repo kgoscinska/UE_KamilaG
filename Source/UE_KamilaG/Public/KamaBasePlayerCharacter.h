@@ -21,12 +21,10 @@ class UE_KAMILAG_API AKamaBasePlayerCharacter : public AKamaBaseCharacter
 	GENERATED_BODY()
 protected:
 	AKamaBasePlayerCharacter();
-	
+	virtual void BeginPlay() override;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UInteractionComponent* InteractionComponent;
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UInputAction* Interaction;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
 	
 	UInputMappingContext* MappingContext;
@@ -42,7 +40,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
 	
 	UInputAction* AttackAction;
-
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
+	UInputAction* JumpAction;
 
 	void Interact(const FInputActionValue& Value);
 	void Move(const FInputActionValue& Value);
