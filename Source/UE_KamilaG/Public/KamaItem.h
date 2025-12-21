@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "public/Interfaces/InteractionInterface.h"
+#include "Interfaces/InteractionInterface.h"
 #include "GameFramework/Actor.h"
 #include "KamaItem.generated.h"
 
@@ -19,6 +19,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void PickUp();
 
 public:	
 	// Called every frame
