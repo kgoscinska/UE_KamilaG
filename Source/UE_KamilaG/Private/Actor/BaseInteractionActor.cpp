@@ -20,5 +20,8 @@ void ABaseInteractionActor::BeginPlay()
 
 void ABaseInteractionActor::Interact_Implementation(AActor* OuterActor)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Base Interaction Actor Interacted with by %s"), *OuterActor->GetName());
+
 }
+
 
